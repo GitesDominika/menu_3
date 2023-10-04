@@ -1,0 +1,35 @@
+@import "../utils/functions";
+@import "../utils/mixin";
+
+.navigation {
+    align-self: flex-end;
+    @include flex(flex-end);
+    &__item {
+        font-family: 'Roboto Light', sans-serif;
+        padding: px-to-rem(10px); px-to-rem(20px);
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, .7);
+
+        &:first-child {
+            border-bottom-right-radius: px-to-rem(4px);
+        }
+
+        &:last-child {
+            border-bottom-right-radius: px-to-rem(4px);
+        }
+
+        &--current {
+            background-color: rgba(0, 0, 0, .7);
+            color: white;
+        }
+    }
+    @include link(white, rgba(0, 0,0, .7)) {
+        border-bottom: px-to-rem(2px) solid rgb(0, 0, 0, .9);
+        transition:  all 200ms ease-in-out;
+    };
+
+    &__highlight {
+    }
+}
