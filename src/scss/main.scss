@@ -2,11 +2,11 @@
 
 @import "./global";
 
+@import "./typography/fonts";
+
 // layout
 @import "./layout/header";
 
 // components
 @import "./components/logo";
 @import "./components/navigation";
-
-@import "./typography/fonts";
