@@ -1,22 +1,7 @@
-
-@import "../vatiables";  $font-path: "../fonts";
-
-$fonts: (
-roboto-bold-webfont: 'Robo Bold', roboto-light-webfont: 'Robo Light'
-
-) {
-    @font-face {
-        font-family: $face-name;
-        src: url('#{$font-name: }/#{$face-file}.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-
-    }}
-
+@import "../variables";
+@import "../utils/mixins";
 
 
 @each $file, $font-family in $fonts {
-
-    @include $font-face($font-family, $file);
-
+    @include font-face($font-family, $file);
 }
